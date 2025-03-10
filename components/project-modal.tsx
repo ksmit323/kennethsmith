@@ -182,14 +182,36 @@ export function ProjectModal() {
                 </button>
               </motion.div>
 
-              {/* Image */}
+              {/* Image or Video */}
               <motion.div
                 className="relative aspect-video w-full overflow-hidden rounded-md border border-primary/20"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.3 }}
               >
-                {isMobile ? (
+                {isMobile && project.videoUrl ? (
+                  <div className="absolute inset-0 bg-slate-900 flex items-center justify-center">
+                    {project.videoUrl.includes('youtube.com') ? (
+                      <iframe
+                        src={`${formatYouTubeUrl(project.videoUrl)}?autoplay=1&mute=0&controls=1&loop=1&rel=0&modestbranding=1`}
+                        title={`${project.title} demo video`}
+                        className="w-full h-full"
+                        frameBorder="0"
+                        allowFullScreen
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      />
+                    ) : (
+                      <video
+                        src={project.videoUrl}
+                        className="w-full h-full"
+                        controls
+                        autoPlay
+                        loop
+                        muted={false}
+                      />
+                    )}
+                  </div>
+                ) : isMobile ? (
                   <div className="absolute inset-0 bg-slate-900 flex items-center justify-center">
                     <div className="relative w-[35%] h-[90%]">
                       <Image
@@ -313,4 +335,27 @@ export function ProjectModal() {
       )}
     </AnimatePresence>
   )
+}
+
+function formatYouTubeUrl(url: string): string {
+  // Handle YouTube Shorts URLs
+  if (url.includes('youtube.com/shorts/')) {
+    const videoId = url.split('/shorts/')[1].split('?')[0];
+    return `https://www.youtube.com/embed/${videoId}`;
+  }
+  
+  // Handle regular YouTube URLs
+  if (url.includes('youtube.com/watch?v=')) {
+    const videoId = new URL(url).searchParams.get('v');
+    return `https://www.youtube.com/embed/${videoId}`;
+  }
+  
+  // Handle youtu.be short URLs
+  if (url.includes('youtu.be/')) {
+    const videoId = url.split('youtu.be/')[1].split('?')[0];
+    return `https://www.youtube.com/embed/${videoId}`;
+  }
+  
+  // Return original if not recognized
+  return url;
 }
