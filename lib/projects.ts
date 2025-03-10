@@ -61,7 +61,7 @@ export const projects: ProjectType[] = [
     slug: "mobile-app-ui",
     description: "I used the Dioxus Rust web framework to make a comprehensive UI design for an alcohol tracking mobile application with a focus on user experience",
     image: "/booze-buddy.webp?height=600&width=800",
-    videoUrl: "https://youtube.com/shorts/K03DNOmfca0?feature=share",
+    videoUrl: "https://youtube.com/shorts/1GNEbAypj2s",
     tags: ["UI/UX", "Mobile", "Fullstack"],
     categories: ["mobile", "frontend", "backend"],
     techStack: ["Android", "Rust", "Dioxus", "SQL"],
