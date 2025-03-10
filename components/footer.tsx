@@ -6,7 +6,7 @@ export function Footer() {
     <footer className="border-t py-8 md:py-12">
       <div className="container flex flex-col md:flex-row justify-between items-center gap-6">
         <div className="flex flex-col items-center md:items-start gap-2">
-          <Link href="/" className="font-bold text-xl">
+          <Link href="https://x.com/MikeOkuda/status/1674643693800951809" className="font-bold text-xl">
             <span className="glow-text">Ad astra per aspera</span>
           </Link>
           <p className="text-sm text-muted-foreground text-center md:text-left">
