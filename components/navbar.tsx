@@ -62,7 +62,7 @@ export function Navbar() {
             <Github className="h-5 w-5 text-muted-foreground hover:text-primary transition-colors" />
           </Link>
 
-          <Button asChild size="sm">
+          <Button asChild size="default" className="rounded-full">
             <a href="#contact">Hire Me</a>
           </Button>
         </nav>
