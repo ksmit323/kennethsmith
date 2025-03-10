@@ -256,7 +256,7 @@ export function ProjectModal() {
                   </div>
                   <div className="space-y-3">
                     {project.liveUrl && (
-                      <Button asChild className="w-full bg-primary hover:bg-primary/80 text-white">
+                      <Button asChild className="rounded-full w-full bg-primary hover:bg-primary/80 text-white">
                         <a
                           href={project.liveUrl}
                           target="_blank"
@@ -268,7 +268,7 @@ export function ProjectModal() {
                       </Button>
                     )}
                     {project.githubUrl && !isProprietary ? (
-                      <Button asChild variant="outline" className="w-full border-primary/20 hover:bg-primary/10">
+                      <Button asChild variant="outline" className="rounded-full w-full border-primary/20 hover:bg-primary/10">
                         <a
                           href={project.githubUrl}
                           target="_blank"

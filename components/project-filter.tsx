@@ -155,7 +155,7 @@ function FilterButton({ isActive, onClick, children }: FilterButtonProps) {
       variant={isActive ? "default" : "outline"}
       size="sm"
       onClick={onClick}
-      className={`relative ${
+      className={`rounded-full relative ${
         isActive ? "bg-primary text-white" : "border-primary/20 hover:bg-primary/10 hover:text-primary"
       }`}
     >
@@ -163,7 +163,7 @@ function FilterButton({ isActive, onClick, children }: FilterButtonProps) {
       {isActive && (
         <motion.span
           layoutId="activeFilterIndicator"
-          className="absolute inset-0 rounded-md bg-primary -z-10"
+          className="absolute inset-0 rounded-full bg-primary -z-10"
           transition={{ type: "spring", duration: 0.5, bounce: 0.3 }}
         />
       )}
