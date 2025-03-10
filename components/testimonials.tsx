@@ -16,7 +16,7 @@ const testimonials = [
   {
     id: 2,
     content:
-      "We needed a lot of help building our computer vision algorith to detect manufacturing defects.  Kenneth came in and immediately hit the ground running.  He sped up our progress tremendously and we were able to push to production very quickly.  Hiring him was obviously the right move.",
+      "We needed a lot of help building our computer vision algorithm to detect manufacturing defects.  Kenneth came in and immediately hit the ground running.  He sped up our progress tremendously and we were able to push to production very quickly.  Hiring him was obviously the right move.",
     author: "Trevor Thill",
     role: "VP of Operations, Polaris",
   },
