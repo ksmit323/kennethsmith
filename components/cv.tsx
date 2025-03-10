@@ -30,7 +30,7 @@ export function Cv() {
   }, [showFullPreview]) // Only re-run effect when showFullPreview changes
 
   const handleDownload = () => {
-    const cvPdf = "/Kenneth_Smith_CV.pdf"
+    const cvPdf = "/Kenneth_Smith.pdf"
     const link = document.createElement("a")
     link.href = cvPdf
     link.download = "Kenneth_Smith_CV.pdf"
