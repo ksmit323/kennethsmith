@@ -117,7 +117,7 @@ export function Cv() {
             className="flex justify-center"
             onClick={(e) => e.stopPropagation()}
           >
-            <Button onClick={handleDownload} size="lg" className="bg-primary hover:bg-primary/80 text-white group">
+            <Button onClick={handleDownload} size="lg" className="rounded-full bg-primary hover:bg-primary/80 text-white group">
               <Download className="mr-2 h-5 w-5 transition-transform group-hover:translate-y-1" />
               Download Full CV
             </Button>
