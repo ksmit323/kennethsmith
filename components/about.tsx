@@ -49,8 +49,9 @@ export function About() {
                 I've worked with a variety of clients from startups to established businesses.
               </p>
               <p>  
-                <strong>Some Programming Heros</strong>: <span className="text-muted-foreground">Bjarne Stroustrup, Robert Martin, Daniel Knuth, 
-                  Marc Andreessen, Chris Lattner, Pieter Levels, Andrej Keparthy, Demis Hassabis, Satoshi Nakamoto, Grant Sanderson, Lex Fridman</span>
+                <strong>Some Programming Heros</strong>: <span className="text-muted-foreground">Andrej Keparthy, Chris Lattner, Donald Knuth, David Malan
+                  Demis Hassabis, Georgios Konstantopoulos, Grant Sanderson, Lex Fridman, Marc Andreessen, Patrick Collins, Pieter Levels, Robert Martin, Satoshi Nakamoto, Tachi
+                </span>
               </p>
               <p>
                 <strong>Some Programming Books I loved</strong>: <span className="text-muted-foreground">Clean Code, The Pragmatic Programmer, 
