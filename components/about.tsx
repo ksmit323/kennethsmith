@@ -50,7 +50,7 @@ export function About() {
               </p>
               <p>  
                 <strong>Some Programming Heros</strong>: <span className="text-muted-foreground">Andrej Keparthy, Chris Lattner, Donald Knuth, David Malan,
-                  Demis Hassabis, Georgios Konstantopoulos, Grant Sanderson, Lex Fridman, Marc Andreessen, Patrick Collins, Pieter Levels, Robert Martin, Satoshi Nakamoto, Tachi
+                  Demis Hassabis, Georgios Konstantopoulos, Grant Sanderson, Lex Fridman, Marc Andreessen, Michael Paulson (ThePrimeagen), Patrick Collins, Pieter Levels, Robert Martin, Satoshi Nakamoto, Tachi
                 </span>
               </p>
               <p>
