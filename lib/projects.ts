@@ -22,7 +22,7 @@ export const projects: ProjectType[] = [
     description: "Lead smart contract engineer and fullstack developer for CryptoArt's NFT relaunch project. I architected, deployed, and audited upgradeable ERC721 NFTs, integrated royalty standards, and developed frontend applications with React Vite and backend APIs with NestJS hosted on AWS infrastructure.",
     image: "/cryptoart.webp?height=600&width=800",
     tags: ["Blockchain", "NFTs", "Smart Contracts", "Fullstack", "AWS"],
-    categories: ["blockchain", "frontend", "backend"],
+    categories: ["blockchain", "frontend", "backend", "cloud"],
     techStack: ["Solidity", "Foundry", "React", "Vite", "TypeScript", "NestJS", "AWS", "Ethers.js", "Alchemy", "RTK Query", "shadcn/ui", "Tailwind CSS"],
     featured: true,
     proprietary: true,
