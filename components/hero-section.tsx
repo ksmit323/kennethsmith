@@ -1,6 +1,6 @@
 "use client"
 
-import { useEffect, useRef } from "react"
+import { useEffect, useRef, useState } from "react"
 import { ArrowRight } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { motion } from "framer-motion"
@@ -8,10 +8,50 @@ import { motion } from "framer-motion"
 export function HeroSection() {
   const canvasRef = useRef<HTMLCanvasElement>(null)
 
+  const [textIndex, setTextIndex] = useState(0)
+  const [displayText, setDisplayText] = useState("")
+  const [isDeleting, setIsDeleting] = useState(false)
+  
+  const phrases = [
+    "Cool Things",
+    "Smart Contracts",
+    "DeFi Protocols", 
+    "Web Applications",
+    "Robust Backends"
+  ]
+
+  useEffect(() => {
+    const currentPhrase = phrases[textIndex]
+    const speed = isDeleting ? 50 : 100
+    const pauseTime = 2000
+
+    const type = () => {
+      if (!isDeleting && displayText === currentPhrase) {
+        setTimeout(() => setIsDeleting(true), pauseTime)
+        return
+      }
+
+      if (isDeleting && displayText === "") {
+        setIsDeleting(false)
+        setTextIndex((prev) => (prev + 1) % phrases.length)
+        return
+      }
+
+      const nextText = isDeleting 
+        ? currentPhrase.substring(0, displayText.length - 1)
+        : currentPhrase.substring(0, displayText.length + 1)
+
+      setDisplayText(nextText)
+    }
+
+    const timer = setTimeout(type, speed)
+    return () => clearTimeout(timer)
+  }, [displayText, isDeleting, textIndex])
+
+
   useEffect(() => {
     const canvas = canvasRef.current
     if (!canvas) return
-
     const ctx = canvas.getContext("2d")
     if (!ctx) return
 
@@ -64,7 +104,6 @@ export function HeroSection() {
         }
       }
     }
-
     const animate = () => {
       requestAnimationFrame(animate)
       ctx.clearRect(0, 0, canvas.width, canvas.height)
@@ -108,41 +147,62 @@ export function HeroSection() {
   }, [])
 
   return (
-    <section className="relative py-16 flex items-center">
-      <canvas ref={canvasRef} className="fixed inset-0 -z-10" />
+    <section className="relative h-screen flex items-center justify-center overflow-hidden">
+      <canvas ref={canvasRef} className="absolute inset-0 -z-10" />
 
-      <div className="container">
+      <div className="container relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          className="max-w-3xl space-y-4"
+          className="max-w-4xl mx-auto text-center space-y-8"
         >
-          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight">
-            Kenneth Smith
+          <h1 className="text-4xl sm:text-6xl md:text-7xl font-bold tracking-tight">
+            Kenneth <span className="text-primary">Smith</span>
           </h1>
           
-          <h3 className="text-2xl sm:text-4xl md:text-4xl font-bold tracking-tight">
-            Build <span className="text-primary glow-text">Cool</span> Things
+          <h3 className="text-2xl sm:text-3xl md:text-4xl font-medium text-muted-foreground h-[1.5em]">
+            Build <span className="text-foreground border-r-2 border-primary animate-pulse pr-1">{displayText}</span>
           </h3>
 
-          <div className="flex flex-row gap-4 pt-2">
+          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+            Fullstack developer specializing in blockchain technology, building secure smart contracts and intuitive web interfaces.
+          </p>
+
+          <div className="flex flex-col sm:flex-row gap-4 justify-center pt-8">
             <Button 
               asChild 
               size="lg" 
-              className="rounded-full bg-gradient-to-r from-indigo-600 via-purple-600 to-blue-600 hover:from-indigo-500 hover:via-purple-500 hover:to-blue-500 border-none shadow-[0_0_15px_rgba(99,102,241,0.3)] hover:shadow-[0_0_25px_rgba(99,102,241,0.5)] transition-all duration-300 px-6"
+              className="rounded-full bg-primary hover:bg-primary/90 text-primary-foreground px-8 h-12 text-lg shadow-[0_0_20px_rgba(168,85,247,0.3)] hover:shadow-[0_0_30px_rgba(168,85,247,0.5)] transition-all duration-300"
             >
-              <a href="#contact" className="group relative overflow-hidden">
-                <div className="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:animate-[shine_1.5s_ease]"></div>
-                <span className="flex items-center justify-center font-medium">
-                  Get in Touch
-                  <ArrowRight className="ml-2 h-4 w-4 transition-all group-hover:translate-x-1 group-hover:scale-110" />
-                </span>
+              <a href="#projects">
+                View Work
+              </a>
+            </Button>
+            
+            <Button 
+              asChild 
+              size="lg" 
+              variant="outline"
+              className="rounded-full px-8 h-12 text-lg border-primary/20 hover:bg-primary/5"
+            >
+              <a href="#contact">
+                Contact Me
               </a>
             </Button>
           </div>
         </motion.div>
       </div>
+      
+      {/* Scroll Indicator */}
+      <motion.div 
+        className="absolute bottom-10 left-1/2 -translate-x-1/2 text-muted-foreground"
+        animate={{ y: [0, 10, 0] }}
+        transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+      >
+        <span className="sr-only">Scroll down</span>
+        <ArrowRight className="h-6 w-6 rotate-90" />
+      </motion.div>
     </section>
   )
 }

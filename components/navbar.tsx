@@ -39,8 +39,8 @@ export function Navbar() {
       }`}
     >
       <div className="container flex h-16 items-center justify-between">
-        <Link href="/" className="font-bold text-xl">
-          <span className="glow-text">DEV</span>FOLIO
+        <Link href="/" className="font-bold text-xl tracking-tighter">
+          Kenneth<span className="text-primary">Smith</span>
         </Link>
 
         <nav className="hidden md:flex items-center gap-6">
