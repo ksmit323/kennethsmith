@@ -176,15 +176,71 @@ export function About() {
                     <div className="absolute w-3 h-3 bg-primary rounded-full -left-[6.5px] top-1.5 ring-4 ring-background"></div>
                     <div className="space-y-1">
                       <div className="flex justify-between items-baseline flex-wrap gap-2">
-                        <h4 className="font-medium text-lg">Full Stack Blockchain Developer</h4>
+                        <h4 className="font-medium text-lg">
+                          Co-Founder &amp; Lead AI/ML Engineer
+                        </h4>
                         <span className="text-xs text-muted-foreground font-mono bg-secondary/50 px-2 py-0.5 rounded">
-                          02/2025 - Present
+                          05/2026 - Present
+                        </span>
+                      </div>
+                      <div className="text-sm font-medium text-primary mb-1">Color Brain</div>
+                      <ul className="text-sm text-muted-foreground list-disc list-outside ml-4 space-y-1">
+                        <li>
+                          Leading technical development of an AI/ML decision-support platform
+                          for textile coloration.
+                        </li>
+                        <li>
+                          Designed an ML system combining historical retrieval, CIEDE2000 color
+                          science with calibrated confidence scoring.
+                        </li>
+                        <li>
+                          Built the product stack, including a Python inference API, Rust/WASM
+                          operator application, and AWS infrastructure.
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <div className="relative pl-6 pb-6 border-l border-primary/20 last:border-0">
+                    <div className="absolute w-3 h-3 bg-primary/70 rounded-full -left-[6.5px] top-1.5 ring-4 ring-background"></div>
+                    <div className="space-y-1">
+                      <div className="flex justify-between items-baseline flex-wrap gap-2">
+                        <h4 className="font-medium text-lg">Rust Software Engineer</h4>
+                        <span className="text-xs text-muted-foreground font-mono bg-secondary/50 px-2 py-0.5 rounded">
+                          02/2026 - Present
+                        </span>
+                      </div>
+                      <div className="text-sm font-medium text-primary mb-1">OBOX</div>
+                      <ul className="text-sm text-muted-foreground list-disc list-outside ml-4 space-y-1">
+                        <li>
+                          Developed Rust-based software across blockchain and systems projects,
+                          including smart contracts and native plugins.
+                        </li>
+                        <li>
+                          Designed smart-contract systems for tokenized property leasing, including
+                          escrow, treasury, and lease lifecycle logic.
+                        </li>
+                        <li>
+                          Built a cross-platform native plugin integrating C/C++ systems through
+                          FFI, with macOS/Linux build and packaging workflows.
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <div className="relative pl-6 pb-6 border-l border-primary/20 last:border-0">
+                    <div className="absolute w-3 h-3 bg-primary/40 rounded-full -left-[6.5px] top-1.5 ring-4 ring-background"></div>
+                    <div className="space-y-1">
+                      <div className="flex justify-between items-baseline flex-wrap gap-2">
+                        <h4 className="font-medium text-lg">Full-Stack Blockchain Developer</h4>
+                        <span className="text-xs text-muted-foreground font-mono bg-secondary/50 px-2 py-0.5 rounded">
+                          02/2025 - 06/2026
                         </span>
                       </div>
                       <div className="text-sm font-medium text-primary mb-1">cryptoart.com</div>
                       <ul className="text-sm text-muted-foreground list-disc list-outside ml-4 space-y-1">
                         <li>
-                          Lead developer of upgradeable ERC721 NFTs implementing ERC7160 using
+                          Lead developer of upgradeable ERC-721 NFTs implementing ERC-7160 using
                           Solidity and Foundry.
                         </li>
                         <li>
@@ -197,68 +253,34 @@ export function About() {
                         </li>
                         <li>
                           Designed and deployed a NestJS backend with PostgreSQL on AWS ECS,
-                          Cloudfront with Terraform.
-                        </li>
-                        <li>
-                          Managed HTTPS certs, DNS, and multi-domain routing with Cloudflare and AWS
-                          ACM.
+                          CloudFront with Terraform.
                         </li>
                       </ul>
                     </div>
                   </div>
 
-                  <div className="relative pl-6 pb-6 border-l border-primary/20 last:border-0">
-                    <div className="absolute w-3 h-3 bg-primary/70 rounded-full -left-[6.5px] top-1.5 ring-4 ring-background"></div>
+                  <div className="relative pl-6 border-l border-primary/20 last:border-l-0">
+                    <div className="absolute w-3 h-3 bg-muted-foreground/30 rounded-full -left-[6.5px] top-1.5 ring-4 ring-background"></div>
                     <div className="space-y-1">
                       <div className="flex justify-between items-baseline flex-wrap gap-2">
-                        <h4 className="font-medium text-lg">Full Stack Blockchain Developer</h4>
+                        <h4 className="font-medium text-lg">Full-Stack Developer</h4>
                         <span className="text-xs text-muted-foreground font-mono bg-secondary/50 px-2 py-0.5 rounded">
-                          09/2024 - 01/2025
+                          08/2023 - 01/2025
                         </span>
                       </div>
-                      <div className="text-sm font-medium text-primary mb-1">Cytric</div>
+                      <div className="text-sm font-medium text-primary mb-1">Contractor</div>
                       <ul className="text-sm text-muted-foreground list-disc list-outside ml-4 space-y-1">
                         <li>
-                          Engineered production-grade smart contracts using Solidity and Hardhat for
-                          unit/integration testing.
+                          Engineered production-grade smart contracts using Solidity and Hardhat
+                          for unit/integration testing.
                         </li>
                         <li>
-                          Developed RESTful APIs with GO and built MongoDB-based indexing service
+                          Develop RESTful APIs with Go and built MongoDB-based indexing service
                           for blockchain events.
                         </li>
                         <li>
                           Integrated Web3.js and Ethers.js libraries with Next.js frontend and
                           FastAPI to synchronize blockchain data.
-                        </li>
-                        <li>
-                          Built scalable cloud infrastructure using AWS services for
-                          high-performance 3D asset rendering and blockchain integration.
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-
-                  <div className="relative pl-6 pb-6 border-l border-primary/20 last:border-0">
-                    <div className="absolute w-3 h-3 bg-primary/40 rounded-full -left-[6.5px] top-1.5 ring-4 ring-background"></div>
-                    <div className="space-y-1">
-                      <div className="flex justify-between items-baseline flex-wrap gap-2">
-                        <h4 className="font-medium text-lg">Smart Contract Developer</h4>
-                        <span className="text-xs text-muted-foreground font-mono bg-secondary/50 px-2 py-0.5 rounded">
-                          08/2023 - 08/2024
-                        </span>
-                      </div>
-                      <div className="text-sm font-medium text-primary mb-1">Freelance</div>
-                      <ul className="text-sm text-muted-foreground list-disc list-outside ml-4 space-y-1">
-                        <li>
-                          Developed smart contracts with Foundry for a NFT staking game on the EVM.
-                        </li>
-                        <li>
-                          Implemented ERC20 and ERC721 tokens and upgradeable contracts, enhancing
-                          the game's flexibility and security.
-                        </li>
-                        <li>
-                          Built blockchain apps using Rust and Axum on the backend and Dioxus on the
-                          frontend.
                         </li>
                       </ul>
                     </div>
@@ -277,7 +299,7 @@ export function About() {
                       <ul className="text-sm text-muted-foreground list-disc list-outside ml-4 space-y-1">
                         <li>
                           Achieved a 99% accuracy rate in defect detection by designing OpenCV
-                          computer vision algorithms using YOLOV3.
+                          computer vision algorithms using YOLOv3.
                         </li>
                         <li>
                           Optimized neural networks on CUDA, resulting in a 30% improvement in
